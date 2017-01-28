@@ -316,6 +316,8 @@ menu {
   background-color: #f7f7f7;
 }.todo__list li span {
   float: right;
+}.todo__list li.todo--completed {
+  text-decoration: line-through;
 }.todo__input{
   color: #2bc0E4;
   font-weight: 200;
@@ -324,8 +326,8 @@ menu {
   background-color: #f7f7f7;
   width: 100%;
   border: 2px solid rgba(0, 0, 0, 0);
-}.todo__input:focus {
-  outline: 0;
   background-color: white;
   border: 2px solid #2bc0E4;
+}.todo__input:focus {
+  outline: 0;
 }

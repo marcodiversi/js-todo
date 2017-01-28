@@ -78,11 +78,17 @@
 
 				document.addEventListener('click', function (e) {
 					if (e.target.localName === 'li') {
-						//do stuff when todo item is clicked
+						e.target.classList.toggle('todo--completed');
+					}
+
+					if (e.target.localName === 'span') {
+						var todo = e.target;
+						_this.deleteTodo(todo);
 					}
 				});
 
 				this.todoInput.addEventListener('keydown', function (e) {
+					// if the key is Return key
 					if (e.keyCode === 13) {
 						_this.addTodo();
 					}
@@ -92,8 +98,20 @@
 			key: 'addTodo',
 			value: function addTodo() {
 				var li = document.createElement('li');
-				var text = this.todoInput.value;
-				this.todoList.append("<li>" + text + "</li>");
+				var span = document.createElement('span');
+
+				li.append(this.todoInput.value);
+				this.todoInput.value = "";
+
+				span.append('x');
+				li.append(span);
+
+				this.todoList.append(li);
+			}
+		}, {
+			key: 'deleteTodo',
+			value: function deleteTodo(todo) {
+				todo.parentElement.remove();
 			}
 		}]);
 
