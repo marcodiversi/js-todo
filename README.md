@@ -2,7 +2,9 @@
 
 ###Setup
 
-Gulp is a task runner. Here is a usual setup of gulp folder which contains `dev.js`, `scripts.js` and `styles.js`. In `dev.js` from line 5 to line 12 you could see the setup to listen to particular port to test your application.
+Gulp is a task runner. Here is a usual setup of gulp folder which contains 
+`dev.js`, `scripts.js` and `styles.js`. In `dev.js` from line 5 to line 12 you
+could see the setup to listen to particular port to test your application.
 
 - [x] Fork or `git clone` the project
 - [x] `npm install` - Download project dependencies

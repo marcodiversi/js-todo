@@ -19,7 +19,7 @@ gulp.task('dev', ['styles', 'scripts'], () => {
     gulp.start('injectCss');
   });
 
-  watch('./app/assets/js/**/*.js', () => {
+  watch(['./app/assets/js/**/*.js', '!./app/assets/js/scripts.js'], () => {
     gulp.start('refreshScripts');
   });
 });
